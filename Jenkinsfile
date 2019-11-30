@@ -1,7 +1,7 @@
 pipeline {
    agent any
    tools {
-  maven 'M3'
+  maven 'C:\apache-maven-3.6.2-bin\apache-maven-3.6.2'
       }
    
    stages{
@@ -16,9 +16,7 @@ pipeline {
    }
    stage('Build') {
       // Run the maven build
-environment {
-  MVN_HOME = "C:\apache-maven-3.6.2-bin\apache-maven-3.6.2"
-}
+
       steps{
          bat '"$MVN_HOME/bin/mvn" -Dmaven.test.failure.ignore clean package'
          
