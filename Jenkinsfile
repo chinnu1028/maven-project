@@ -16,7 +16,7 @@ pipeline {
    }
    stage('Build') {
       // Run the maven build
-     environment {
+environment {
   MVN_HOME = "C:\apache-maven-3.6.2-bin\apache-maven-3.6.2"
 }
       steps{
