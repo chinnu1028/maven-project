@@ -17,7 +17,7 @@ pipeline {
    stage('Build') {
       // Run the maven build
       steps{
-         sh '"$MVN_HOME/bin/mvn" -Dmaven.test.failure.ignore clean package'
+         bat '"$MVN_HOME/bin/mvn" -Dmaven.test.failure.ignore clean package'
          
       }
    }
