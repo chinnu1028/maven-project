@@ -17,7 +17,7 @@ pipeline {
    stage('Build') {
       // Run the maven build
      environment {
-  MVN_HOME = "$MVN_HOME"
+  MVN_HOME = "C:\apache-maven-3.6.2-bin\apache-maven-3.6.2"
 }
       steps{
          bat '"$MVN_HOME/bin/mvn" -Dmaven.test.failure.ignore clean package'
